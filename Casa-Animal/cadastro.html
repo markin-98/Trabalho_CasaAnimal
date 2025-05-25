@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="Login-principal">
+        <div class="Login-direito">
+            <form class="Quadro-login" id="Quadro-login">
+                <h1>CADASTRO ONG</h1>
+                <div class="Campo-texto">
+                    <label for="usuario">Razão Social</label>
+                    <input type="text" id="nome" placeholder="Digite a Razão Social">
+                </div>
+                <div class="Campo-texto">
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" id="cnpj" placeholder="Digite o CNPJ">
+                </div>
+                <div class="Campo-texto">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" placeholder="Digite o CEP">
+                </div>
+                <div class="Campo-texto">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" placeholder="Digite o Bairro">
+                </div>
+                <div class="Campo-texto">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" placeholder="Digite o Telefone">
+                </div>
+                <div class="Campo-texto">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" placeholder="Digite o Endereço">
+                </div>
+                <div class="Campo-texto">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Digite seu Email">
+                </div>
+                <div class="Campo-texto">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite sua Senha">
+                </div>
+                <button onclick="cadastrar()" class="botão-login">Cadastrar</button>
+                <p class="criarconta">Já possui uma conta? <a href="/login.html">Entrar</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('adoptionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+        
+            fetch('/submit-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => {
+                if (response.ok) {
+                    alert('Dados enviados com sucesso!');
+                } else {
+                    alert('Erro ao enviar os dados.');
+                }
+            }).catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao enviar os dados.');
+            });
+        });
+        </script>
+        
+
+
+    <script src="cadastro.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4392b60e4c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="cadastro _animal.css">
+    <title>Cadastro Animal</title>
+  
+</head>
+
+<body>
+    <header class="cabeçalho">
+        <nav class="navbar navbar-expand-lg rounded-bottom">
+            <div class="container-fluid">
+            <div class="logo">
+              <a href="principal.html">
+            <img src="/imgs/Logo/logo.png" class="d-block w-100" alt="..."></a></div>
+            <div class="logo1">
+                <h1>Animais para Doação</h1>
+            </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" href="principal.html">Home</a>
+                  <a class="nav-link" href="pet.html">Adoção</a>
+                  <a class="nav-link" href="ongs.html">Ongs</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        <div class="p-2 position-relative mx-auto rounded shadow" id="title-cadastro-animal">
+            <h6>Cadastrar animal</h6>
+        </div>
+
+        <div class="container mt-5">
+            <div class="card shadow rounded" id="card-cadastro-animal">
+                <div id="div-title">
+                    <p>Envie a foto do animal:</p>
+                </div>
+                <div id="upload">
+                    <input class="form-control" type="url" id="url" placeholder="Insira a url da foto">
+                </div>
+                <div class="form-cadastro-animal p-5">
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome do animal</label>
+                            <input class="form-control" type="text" name="nome" id="nome_animal" required>
+                        </div>
+                   
+                        <div class="form-group">
+                            <label for="raca">Raça</label>
+                            <input class="form-control" type="text" name="raca" id="raca" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="idade">Idade</label>
+                            <input class="form-control" type="text" name="idade" id="idade" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="descricao">Descrição</label>
+                            <textarea class="form-control" type="text" name="descricao" id="descricao" rows="3" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="btn-cadastrar m-auto">
+                    <a href="animal.html" class="btn" id="btn-cadastrar">Cadastrar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-flux">
+            <div class="row1">
+                <div class="col-12">
+                    <div id="footer_content">
+                        <div id="footer_contacts">
+                            <h5>Siga-nos</h5>
+                            <div id="footer_social_media">
+                                
+                                <a href="#" class="footer_link" id="instagram">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                                <a href="#" class="footer_link" id="twitter">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+            
+                        <ul class="footer-list">
+                            <li>
+                                <h5>Contato</h5>
+                            </li>
+                            <li>
+                              <a href="#" class="footer-link">Aluno: Marcus Vinicius</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Henrique Gonçalves</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Turma: ADS</a>
+                            </li>
+                        </ul>
+            
+                        <ul class="footer-list">
+                            <li>
+                                <h5>Email</h5>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">contato@adocaoongs.com</a>
+                            </li>
+                        </ul>
+            
+                        <ul class="footer-list">
+                            <li>
+                                <h5>Opções</h5>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="pet.html" class="footer-link">Adoção</a>
+                            </li>
+                            <li>
+                                <a href="ongs.html" class="footer-link">Ong's</a>
+                            </li>
+                        </ul>
+                    </div>
+                        <div id="footer_copyrigth">
+                          &#169 - 2023 all rigths reserverd
+                        </div>
+                </div>
+            </div>
+        </div>
+      </footer> 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+        crossorigin="anonymous"></script>
+    <script src="cadastro_animal.js"></script>
+</body>
+
+</html>
